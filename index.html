@@ -6,7 +6,87 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <header class="main-header">
+
+      <nav class="main-navigation">
+
+      <a href="#"  class ="main-header-logo"><img src="" width="" height="" alt="логотип" ></a>
+
+
+        <ul class="site-navigation">
+
+          <li><a href="information.html">информация</a></li>
+          <li><a href="gallery.html">фото и видео</a></li>
+          <li><a href="map.html">карта штата</a></li>
+          <li><a href="hotels.html">гостиницы</a></li>
+
+        </ul>
+
+      </nav>
+
+    </header>
+
+    <main class="main-content">
+
+      <section class="about-sedona">
+
+       <img src="" width="" heigth="" alt="sedona-city">
+
+        <h1>Седона-небольшой городок в аризоне,заслуживающий большего!</h1>
+        <p>Рассмотрим 5 причин, по которым седона круче чем гранд-каньон!</p>
+
+     </section>
+
+     <section class="reasons">
+
+       <!-- этот блок делать не нужно, но думаю это будет grid ?-->
+
+     </section>
+
+     <section class="dating">
+
+       <h2>Заинтересовались?</h2>
+       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+
+      <a class="button" href="catalog.html">Поиск гостиницы в седоне</a>
+
+       <!--здесь будет форма выбора дат.Я так понял, ее делать не нужно ?!-->
+
+     </section>
+
+    </main>
+
+    <footer class="main-footer">
+
+    <!--верно ли здесь везде использовать дивы? сомнения по этому поводу-->
+
+      <div  class="visitsedona" >
+        <a href="#">#visitsedona</a>
+      <!--этот элемент вообще ссылка, или просто надпись ?-->
+      </div>
+
+      <div class="social-buttons">
+      	<ul>
+      	    <li>
+              <a class="social-twitter" href="https://twitter.com/" >twitter</a>
+            </li>
+            <li>
+              <a class="social-facebook" href="htpps://facebook.com/" >facebook</a>
+            </li>
+            <li>
+              <a class="social-youtube" href="htpps://youtube.com/" >youtube</a>
+            </li>
+      	</ul>
+      </div>
+
+      <div class="copyrights">
+          <p>website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="" width="" height="" alt="logo"></a>htmlacademy.ru</p>
+          <!--здесь сомнения по поводу вложений в ссылку: логотип академии это отдельный элемент, или это все ссылка и не нужно использовать <p> ?-->
+          <!-- то есть так : <a href="https://htmlacademy.ru/intensive/htmlcss">website by<img src="#" width="#" height="#" alt="logo">htmlacademy.ru</a>-->
+      </div>
+
+    </footer>
+
 
   </body>
 </html>
