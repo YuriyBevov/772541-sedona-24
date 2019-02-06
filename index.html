@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 <body>
 
@@ -33,7 +36,7 @@
 
       <h1 class="visually-hidden">Седона-город в Аризоне</h1>
       <p>Седона-небольшой городок в аризоне,заслуживающий большего!</p>
-      <p>Рассмотрим 5 причин, по которым седона круче чем гранд-каньон!</p>
+      <h2>Рассмотрим 5 причин, по которым седона круче чем гранд-каньон!</h2>
 
     </section>
 
@@ -43,7 +46,7 @@
 
       <ul class="reasons-list">
 
-		   <li class="reason-item">
+		   <li class="reason-item special-item">
 		    <b>Настоящий городок</b>
         <span>- №1 -</span>
         <p>Седона-не аттракцион для туристов,там течет своя жизнь</p>
@@ -73,7 +76,7 @@
 
        </li>
 
-       <li class="reason-item">
+       <li class="reason-item special-item">
 	      <b>Там есть<br>мост дьявола</b>
         <span>- №2 -</span>
         <p>Да,по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -102,24 +105,24 @@
 
     </section>
 
-    <section class="checking">
+    <section class="booking">
 
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
 
-      <p>Заинтересовались?</p>
+      <b>Заинтересовались?</b>
       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <a class="button" href="#">Поиск гостиницы в седоне</a>
+      <a class="button-search" href="#">Поиск гостиницы в седоне</a>
 
 	    <form action="https://echo.htmlacademy.ru" method="post" class="hotel-searching">
 
        <p class="hotel-searching-item"><label for="check-in">Дата заезда:</label>
         <input id="check-in" type="text" name="check-in" value="" placeholder="24 апреля 2017">
-        <button class="calendar" type="button" aria-label="Календарь"></button>
+        <button class="button-calendar" type="button" aria-label="Календарь"></button>
        </p>
 
        <p class="hotel-searching-item"><label for="check-out">Дата выезда:</label>
         <input id="check-out" type="text" name="check-out" value="" placeholder="4 июля 2017">
-        <button class="calendar" type="button" aria-label="Календарь"></button>
+        <button class="button-calendar" type="button" aria-label="Календарь"></button>
        </p>
 
        <p class="hotel-searching-item"><label for="adults">Взрослые:</label>
@@ -169,7 +172,7 @@
     </ul>
 
     <div class="copyrights">
-      <p>website by<a href="https://htmlacademy.ru/intensive/htmlcss" class="company-logo">Логотип компании</a></p>
+      <p>website by<a href="https://htmlacademy.ru/intensive/htmlcss" class="company-logo" aria-label="Логотип Компании"></a></p>
     </div>
 
    </footer>
