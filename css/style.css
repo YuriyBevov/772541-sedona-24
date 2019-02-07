@@ -38,11 +38,11 @@ a {
 
 .site-navigation a:hover,
 .site-navigation a:focus {
-  color: #82B5D3;
+  color: #81b3d2;
 }
 
 .site-navigation a:active {
-  color: #CBCBCB;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .current-page a,
@@ -56,7 +56,7 @@ a {
 .main-navigation {
   font-size: 14px;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
 
   background-color: #ffffff;
 }
@@ -93,9 +93,14 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
+  color:#000000;
+
+  background-color: #ffffff;
 }
 
-.special-item {
+/*правильно ли ниже и почему фон бэшки вылез за рамки ? из за того , что другой размер шрифта, по сравнению с p ?! */
+
+.special-item, .special-item b {
   color: #ffffff;
 
   background-color: #82B5D3;
@@ -118,10 +123,13 @@ a {
 }
 
 .button-search {
+  font-family: "PT Sans","Arial",sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   border: none;
+  text-align: center;
+  text-transform: uppercase;
   color: #ffffff;
 
   background-color: #766357;
@@ -142,8 +150,12 @@ a {
 }
 
 .button-submit {
+  font-family: "PT Sans","Arial",sans-serif;
   font-size: 21px;
+  line-height: 26px;
   font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
   border: none;
   color: #ffffff;
 
@@ -183,7 +195,7 @@ a {
   background-color: #F2F3F3;
 }
 
-::-webkit-input-placeholder {
+.hotel-searching-item::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
@@ -193,19 +205,31 @@ a {
   background-color: #F2F3F3;
 }
 
-::-moz-placeholder {
+.hotel-searching-item::-moz-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
   color: #000000;
 
   background-color: #F2F3F3;
 }
 
-:-moz-placeholder {
+.hotel-searching-item::-moz-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
   color: #000000;
 
   background-color: #F2F3F3;
 }
 
-:-ms-placeholder {
+.hotel-searching-item::-ms-placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
   color: #000000;
 
   background-color: #F2F3F3;
@@ -233,7 +257,7 @@ a {
 .social-buttons a {
   color: #000000;
 
-  background-color:  #82B5D3;
+  background-color:  #82b3d2;
 }
 
 .social-buttons a:hover,
@@ -300,6 +324,9 @@ a {
 }
 
 .hotel-type a {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
   color: #ffffff;
 
   background-color: #82B5D3;
@@ -307,18 +334,27 @@ a {
 
 .hotel-type a:hover,
 .hotel-type a:focus {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
   color: #ffffff;
 
   background-color: #669ec0;
 }
 
 .hotel-type a:active {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #5496bd;
 }
 
 .hotel-accepting a {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
   color: #ffffff;
 
   background-color:#766357;
@@ -326,12 +362,18 @@ a {
 
 .hotel-accepting a:hover,
 .hotel-accepting a:focus {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
   color: #ffffff;
 
   background-color: #604e43;
 }
 
 .hotel-accepting a:active {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
   color:rgba(255, 255, 255, 0.3);
 
   background-color: #503e33;
