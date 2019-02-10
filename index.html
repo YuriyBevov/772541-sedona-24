@@ -9,6 +9,8 @@
   </head>
 <body>
 
+<div class="container">
+
   <header class="main-header">
 
     <nav class="main-navigation">
@@ -31,7 +33,7 @@
     <section class="about-sedona">
 
       <div class="background-sedona">
-       <img src="img/welcome.svg" width="459" height="353" alt="Welcome to Sedona">
+       <img src="img/welcome.svg" width="459" height="353" alt="welcome to sedona">
       </div>
 
       <h1 class="visually-hidden">Седона-город в Аризоне</h1>
@@ -46,19 +48,21 @@
 
       <ul class="reasons-list">
 
-		   <li class="reason-item special-item">
-		    <b>Настоящий городок</b>
-        <span>- №1 -</span>
-        <p>Седона-не аттракцион для туристов,там течет своя жизнь</p>
+       <div class="special-item-container">
+		    <li class="reason-item special-item">
+         <b>Настоящий городок</b>
+         <span class="reason-number">- №1 -</span>
+         <p>Седона-не аттракцион для туристов,там течет своя жизнь</p>
+		    </li>
         <div class="background-city"></div>
-		   </li>
+       </div>
 
        <li>
 
          <ul class="sedona-recomendations">
 
           <li class="recomendation-item">
-           <b class="house">Жилье</b>
+           <b class="house">Жильё</b>
            <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
           </li>
 
@@ -76,31 +80,36 @@
 
        </li>
 
-       <li class="reason-item special-item">
-	      <b>Там есть<br>мост дьявола</b>
-        <span>- №2 -</span>
-        <p>Да,по нему можно пройти! Если конечно вы осмелитесь</p>
+       <div class="special-item-container">
         <div class="background-bridge"></div>
-       </li>
+        <li class="reason-item special-item">
+	       <b>Там есть<br>мост дьявола</b>
+         <span class="reason-number">- №2 -</span>
+         <p>Да,по нему можно пройти! Если конечно вы осмелитесь</p>
+        </li>
+       </div>
 
-       <li class="reason-item">
-	      <b>Небольшая площадь</b>
-        <span>- №3 -</span>
-        <p>Все досторимечательности находятся очень близко</p>
-       </li>
+       <div class="reasons-container">
 
-       <li class="reason-item">
-        <b>Красивая дорога</b>
-        <span>- №4 -</span>
-        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-       </li>
+        <li class="reason-item">
+	       <b>Небольшая площадь</b>
+         <span class="reason-number">- №3 -</span>
+         <p>Все досторимечательности находятся очень близко</p>
+        </li>
 
-       <li class="reason-item">
-		    <b>Мало туристов</b>
-        <span>- №5 -</span>
-        <p>Большинство едет в Гранд Каньон и толпится там!</p>
-       </li>
+        <li class="reason-item">
+         <b>Красивая дорога</b>
+         <span class="reason-number">- №4 -</span>
+         <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </li>
 
+        <li class="reason-item">
+		     <b>Мало туристов</b>
+         <span class="reason-number">- №5 -</span>
+         <p>Большинство едет в Гранд Каньон и толпится там!</p>
+        </li>
+
+       </div>
       </ul>
 
     </section>
@@ -109,37 +118,43 @@
 
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
 
-      <b>Заинтересовались?</b>
-      <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <a class="button-search" href="#">Поиск гостиницы в седоне</a>
+      <div class="booking-container">
+       <b>Заинтересовались?</b>
+       <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+      </div>
 
-	    <form action="https://echo.htmlacademy.ru" method="post" class="hotel-searching">
+       <a class="button-search" href="#">Поиск гостиницы в седоне</a>
 
-       <p class="hotel-searching-item"><label for="check-in">Дата заезда:</label>
-        <input id="check-in" type="text" name="check-in" value="" placeholder="24 апреля 2017">
-        <button class="button-calendar" type="button" aria-label="Календарь"></button>
-       </p>
+       <form action="https://echo.htmlacademy.ru" method="post" class="hotel-searching">
 
-       <p class="hotel-searching-item"><label for="check-out">Дата выезда:</label>
-        <input id="check-out" type="text" name="check-out" value="" placeholder="4 июля 2017">
-        <button class="button-calendar" type="button" aria-label="Календарь"></button>
-       </p>
+        <p class="hotel-searching-item"><label for="check-in">Дата заезда:</label>
+         <input id="check-in" type="text" name="check-in" value="" placeholder="24 апреля 2017">
+         <button class="button-calendar" type="button" aria-label="Календарь"></button>
+        </p>
 
-       <p class="hotel-searching-item"><label for="adults">Взрослые:</label>
-        <button class="button-minus" type="button" aria-label="Уменьшить"></button>
-        <input id="adults" type="text" name="adults" value="" placeholder="2">
-        <button class="button-plus" type="button" aria-label="Увеличить"></button>
-       </p>
+        <p class="hotel-searching-item"><label for="check-out">Дата выезда:</label>
+         <input id="check-out" type="text" name="check-out" value="" placeholder="4 июля 2017">
+         <button class="button-calendar" type="button" aria-label="Календарь"></button>
+        </p>
 
-       <p class="hotel-searching-item"><label for="children">Дети:</label>
-        <button class="button-minus" type="button" aria-label="Уменьшить"></button>
-        <input id="children" type="text" name="children" value="" placeholder="0">
-        <button class="button-plus" type="button" aria-label="Увеличить"></button>
-       </p>
+        <div class="special-searching-items">
 
-       <button class="button-submit" type="submit">Найти</button>
+         <p class="hotel-searching-item"><label for="adults">Взрослые:</label>
+          <button class="button-minus" type="button" aria-label="Уменьшить"></button>
+          <input id="adults" type="text" name="adults" value="" placeholder="2">
+          <button class="button-plus" type="button" aria-label="Увеличить"></button>
+         </p>
 
-      </form>
+         <p class="hotel-searching-item"><label for="children">Дети:</label>
+          <button class="button-minus" type="button" aria-label="Уменьшить"></button>
+          <input id="children" type="text" name="children" value="" placeholder="0">
+          <button class="button-plus" type="button" aria-label="Увеличить"></button>
+         </p>
+        </div>
+
+        <button class="button-submit" type="submit">Найти</button>
+
+       </form>
 
     </section>
 
@@ -147,7 +162,7 @@
 
   <footer class="main-footer">
 
-    <div  class="visitsedona">
+    <div  class="visitsedona"><!--Это ссылка ???-->
       <a href="#">#visitsedona</a>
     </div>
 
@@ -172,11 +187,15 @@
     </ul>
 
     <div class="copyrights">
-      <p>website by<a href="https://htmlacademy.ru/intensive/htmlcss" class="company-logo" aria-label="Логотип Компании"></a></p>
+      <p>website by
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="company-logo" aria-label="Логотип Компании"></a>
+      </p>
     </div>
 
    </footer>
 
- </body>
+ </div>
+
+</body>
 
 </html>
