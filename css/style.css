@@ -695,7 +695,7 @@ margin-top: 16px;
 
 /*hotels.html*/
 
-.inner-page *{
+main *{ /*пока не разберусь с отступами*/
   margin: 0;
   padding: 0;
 
