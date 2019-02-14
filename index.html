@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-<body>
+<body class="inner page">
 
 <div class="container">
 
@@ -37,27 +37,24 @@
       </div>
 
       <h1 class="visually-hidden">Седона-город в Аризоне</h1>
-      <p>Седона-небольшой городок в аризоне,заслуживающий большего!</p>
-      <h2>Рассмотрим 5 причин, по которым седона круче чем гранд-каньон!</h2>
+      <p>Седона-небольшой городок в аризоне, заслуживающий большего!</p>
 
     </section>
 
     <section class="reasons-and-recomendations">
 
-      <h2 class="visually-hidden">Достопримечательности и преимущества Седоны</h2>
+      <h2>Рассмотрим 5 причин, по которым седона круче чем гранд-каньон!</h2>
 
       <ul class="reasons-list">
 
-       <div class="special-item-container">
 		    <li class="reason-item special-item">
          <b>Настоящий городок</b>
          <span class="reason-number">- №1 -</span>
          <p>Седона-не аттракцион для туристов,там течет своя жизнь</p>
-		    </li>
-        <div class="background-city"></div>
-       </div>
+         <div class="background-city"></div>
+        </li>
 
-       <li>
+        <li>
 
          <ul class="sedona-recomendations">
 
@@ -80,16 +77,12 @@
 
        </li>
 
-       <div class="special-item-container">
-        <div class="background-bridge"></div>
         <li class="reason-item special-item">
 	       <b>Там есть<br>мост дьявола</b>
          <span class="reason-number">- №2 -</span>
          <p>Да,по нему можно пройти! Если конечно вы осмелитесь</p>
+         <div class="background-bridge"></div>
         </li>
-       </div>
-
-       <div class="reasons-container">
 
         <li class="reason-item">
 	       <b>Небольшая площадь</b>
@@ -109,7 +102,6 @@
          <p>Большинство едет в Гранд Каньон и толпится там!</p>
         </li>
 
-       </div>
       </ul>
 
     </section>
@@ -118,10 +110,8 @@
 
       <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
 
-      <div class="booking-container">
        <b>Заинтересовались?</b>
        <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      </div>
 
        <a class="button-search" href="#">Поиск гостиницы в седоне</a>
 
@@ -137,7 +127,7 @@
          <button class="button-calendar" type="button" aria-label="Календарь"></button>
         </p>
 
-        <div class="special-searching-items">
+        <div class="form-container">
 
          <p class="hotel-searching-item"><label for="adults">Взрослые:</label>
           <button class="button-minus" type="button" aria-label="Уменьшить"></button>
@@ -150,6 +140,7 @@
           <input id="children" type="text" name="children" value="" placeholder="0">
           <button class="button-plus" type="button" aria-label="Увеличить"></button>
          </p>
+
         </div>
 
         <button class="button-submit" type="submit">Найти</button>
