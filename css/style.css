@@ -103,12 +103,9 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
-  color:#000000;
-
-  background-color: #ffffff;
 }
 
-.special-item, .special-item b {
+.special-item {
   color: #ffffff;
 
   background-color: #82B5D3;
@@ -407,7 +404,7 @@ a {
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: flex-start; /*Значение по ум-ю, почему не space-between? Потому что при добавлении новых пунктов, менюшки будут вставать друг за другом на новой строке без промежутков*/
+  justify-content: flex-start; /*Значение по ум-ю, почему не space-between? Потому что при добавлении новых пунктов, менюшки будут вставать друг за другом на новой строке без промежутков*/
   width: 1200px;
   margin: 0;
   padding: 0;
@@ -470,11 +467,7 @@ a {
   margin: 0; /*Убрал все отступы у списков этого блока*/
   padding: 0;
 }
-/*
-.reasons-and-recomendations * {
-  outline: 1px solid grey;
-}
-*/
+
 .reasons-and-recomendations {
   text-align: center;
   margin-bottom: 57px;
@@ -486,13 +479,13 @@ a {
 
 .reasons-list {
   display: flex;
-  min-width: 1200px;
+  width: 1200px;
   flex-wrap: wrap;
 }
 
 .sedona-recomendations {
   display: flex;
-  min-width: 1200px;
+  width: 1200px;
   flex-wrap: wrap;
 }
 
@@ -533,10 +526,11 @@ text-align: center;
 }
 
 .button-search {
-width: 568px;
-align-self: center;
-padding: 35px 140px;
-white-space: nowrap;
+  width: 568px;
+  align-self: center;
+  white-space: nowrap;
+  padding: 35px 0;
+  outline: 1px solid red;
 }
 
 .hotel-searching {
@@ -587,7 +581,123 @@ white-space: nowrap;
   padding: 0;
 }
 
-.hotels-list {
+/*
+.hotels-list-item * {
+  outline: 1px solid red;
+}
+*/
+
+.hotels-list /*весь список*/{
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.hotels-list-item /*li-шки*/{
+  display: flex;
+  margin: 0;
+  padding: 30px 72px;
+}
+
+.hotels-list-item img {
+  margin-right: 30px;
+}
+
+.hotel-name a {
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-name {
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-item-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotel-name {
+  width: 779px;
+  margin-bottom: 5px;
+}
+
+.hotel-type {
+  width: 110px;
+  margin-right: 6px;
+}
+
+.hotel-type p {
+  margin-bottom: 12px;
+}
+
+.hotel-accepting {
+  width: 142px;
+  margin-right: 522px;
+}
+
+.hotel-accepting p {
+  margin-bottom: 12px;
+}
+
+.about-hotel {
+  padding: 3px 16px;
+}
+
+.booking-button {
+  padding: 3px 16px;
+}
+
+.hotel-rating {
+  position: relative;
+  width: 110px;
+  text-align: center;
+  padding-top: 37px;
+}
+
+.hotel-rating p {
+  padding: 3px;
+}
+
+.four-stars {
+  content:"";
+  position: absolute;
+  top: -30px;
+  left: 22px;
+  width: 88px;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+}
+
+.three-stars {
+  content:"";
+  position:absolute;
+  top: -30px;
+  left: 45px;
+  width: 65px;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+}
+
+.two-stars {
+  content:"";
+  position:absolute;
+  top: -30px;
+  left: 70px;
+  width: 40px;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+}
+
+.hotels-list-item {
+  border-bottom: 1px solid rgba(0, 1, 1, 0.2);
+}
+
+.hotels-list-item:first-child {
+  border-top: 1px solid rgba(0, 1, 1, 0.2);
 }
