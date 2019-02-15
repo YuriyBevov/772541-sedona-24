@@ -414,10 +414,23 @@ a {
   display: block;
   min-width: 240px;
   padding: 15px 0px;
-  text-align: center;
 }
 
-.site-navigation li:nth-child(2) {
+.site-navigation li:nth-child(4n+1),
+.site-navigation li:nth-child(4n+2) {
+  text-align: left;
+  padding-left: 72px;
+  outline: 1px solid red;
+}
+
+.site-navigation li:nth-child(4n+3),
+.site-navigation li:nth-child(4n+4) {
+  text-align: right;
+  padding-right: 72px;
+  outline: 1px solid red;
+}
+
+.site-navigation li:nth-child(4n+2) {
   margin-right: 240px;
 }
 
@@ -510,15 +523,24 @@ a {
   outline: 1px solid grey;
 }*/
 
+.booking * {
+  outline: 1px solid red;
+}
+
 .booking {
-display: flex;
-flex-direction: column;
-text-align: center;
-/*min-height: 764px; /*временно для сеток*/
+  position: relative;
+  text-align: center;
+  outline: 1px solid red;
+
+  padding-bottom: 473px;/*временно пока нет карты*/
 }
 
 .booking b {
-  margin-bottom: 12px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-top: 57px;
+  margin-bottom: 25px;
 }
 
 .booking p {
@@ -526,14 +548,15 @@ text-align: center;
 }
 
 .button-search {
+  display: inline-block;
   width: 568px;
-  align-self: center;
-  white-space: nowrap;
-  padding: 35px 0;
-  outline: 1px solid red;
+  padding: 35px 15px;
 }
 
 .hotel-searching {
+  position: absolute;
+  top: 303px;
+  left: 316px;
   background-color: grey;
   width: 568px;
   align-self: center;
@@ -560,9 +583,7 @@ text-align: center;
   width: 458px;
   margin: 0;
   padding: 0;
-  align-self: center;
-  padding: 17px 197px;
-  white-space: nowrap;
+  padding: 17px 15px;
 }
 
 
@@ -586,6 +607,10 @@ text-align: center;
   outline: 1px solid red;
 }
 */
+
+.hotels-list * {
+  outline: 1px solid red;
+}
 
 .hotels-list /*весь список*/{
   display: flex;
@@ -614,6 +639,90 @@ text-align: center;
   padding: 0;
 }
 
+.hotel-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 258px;
+  margin-right: auto;
+}
+
+.hotel-type {
+  width: 110px;
+  margin-right: 6px;
+}
+
+.hotel-type p {
+  margin-bottom: 12px;
+}
+
+.hotel-accepting {
+  width: 142px;
+}
+
+.hotel-accepting p {
+  margin-bottom: 12px;
+}
+
+.about-hotel {
+  padding: 3px 16px;
+}
+
+.booking-button {
+  padding: 3px 16px;
+}
+
+.hotel-rating {
+  position: relative;
+  width: 110px;
+  text-align: center;
+  padding-top: 64px;
+}
+
+.hotel-rating p {
+  padding: 3px;
+}
+
+.four-stars {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 22px;
+  width: 88px;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+}
+
+.three-stars {
+  content:"";
+  position:absolute;
+  top: 0;
+  left: 45px;
+  width: 65px;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+}
+
+.two-stars {
+  content:"";
+  position:absolute;
+  top: 0;
+  left: 70px;
+  width: 40px;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+}
+
+.hotels-list-item {
+  border-bottom: 1px solid rgba(0, 1, 1, 0.2);
+}
+
+.hotels-list-item:first-child {
+  border-top: 1px solid rgba(0, 1, 1, 0.2);
+}
+/*
 .hotel-item-container {
   display: flex;
   flex-wrap: wrap;
@@ -701,3 +810,4 @@ text-align: center;
 .hotels-list-item:first-child {
   border-top: 1px solid rgba(0, 1, 1, 0.2);
 }
+*/
