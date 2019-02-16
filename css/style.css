@@ -404,7 +404,6 @@ a {
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /*Значение по ум-ю, почему не space-between? Потому что при добавлении новых пунктов, менюшки будут вставать друг за другом на новой строке без промежутков*/
   width: 1200px;
   margin: 0;
   padding: 0;
@@ -487,7 +486,7 @@ a {
 }
 
 .reasons-and-recomendations h2 {
-  margin-bottom: 56px;
+  margin-bottom: 51px;
 }
 
 .reasons-list {
@@ -502,49 +501,149 @@ a {
   flex-wrap: wrap;
 }
 
-.recomendation-item {
+.recomendation-item {/*li-шки в sedona-recomendations*/
   width: 400px;
-  min-height: 330px; /*временно для сеток*/
+  padding: 60px;
 }
 
-.reason-item {
+.recomendation-item b{
+  display: block;
+  position: relative;
+  width: 160px;
+  margin: 0 auto 30px auto;
+  padding-top: 101px;
+}
+
+.reason-item {/*li- шки в reasons-list*/
   width: 400px;
-  min-height: 256px; /*временно для сеток*/
+  padding-top: 50px;
+  padding-bottom: 64px;
+}
+
+.reason-item/*:not(.special-item)*/ {
+  background-color: #eeeeee;
+}
+
+
+.reason-item b {
+  display: block;
+  width: 160px;
+  margin: 0 auto 25px auto;
+}
+
+.reason-item p {
+  width: 255px;
+  margin: auto;
 }
 
 .special-item {
+  display: flex;
   width: 1200px;
 }
 
+.special-item-container {
+  width: 400px;
+  padding: 46px 60px;
+  order: 1;
+}
 
+.special-item b {
+  display: block;
+  width: 160px;
+  margin: 0 auto 25px auto;
+}
+
+.background-city {
+  width: 800px;
+  height: 256px;
+  background-image: url("../img/background-city.jpg");
+  order: 1;
+}
+
+.background-bridge {
+  width: 800px;
+  height: 100%;
+  background-image: url("../img/background-bridge.jpg");
+  background-position: 0 -76px;
+  order: 0;
+}
+
+
+
+.reason-number {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.house::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -37px;
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/house.svg");
+}
+
+
+.food::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -37px;
+  width: 74px;
+  height: 70px;
+  background-image: url("../img/hamburger.svg");
+}
+
+.souvenir::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -32px;
+  width: 64px;
+  height: 76px;
+  background-image: url("../img/souvenir.svg");
+}
+
+/*
+.background-city {
+  display: block;
+  width: 800px;
+  height: 256px;
+  background-image: url("../img/background-city.jpg");
+}
+
+.background-bridge {
+  display: block;
+  width: 800px;
+  height: 256px;
+  background-image: url("../img/background-bridge.jpg");
+}
+*/
 /*Блок с формой*/
-
-/*.booking * {
-  outline: 1px solid grey;
-}*/
 
 .booking * {
   outline: 1px solid red;
 }
 
 .booking {
-  position: relative;
   text-align: center;
-  outline: 1px solid red;
-
-  padding-bottom: 473px;/*временно пока нет карты*/
 }
 
 .booking b {
   display: block;
   padding: 0;
   margin: 0;
-  padding-top: 57px;
+  padding-top: 49px;
   margin-bottom: 25px;
 }
 
 .booking p {
-  margin-bottom: 52px;
+  margin-bottom: 47px;
 }
 
 .button-search {
@@ -553,9 +652,14 @@ a {
   padding: 35px 15px;
 }
 
+.form-place-container {
+  position: relative;
+  padding-bottom: 473px;
+}
+
 .hotel-searching {
   position: absolute;
-  top: 303px;
+  top: 0;
   left: 316px;
   background-color: grey;
   width: 568px;
@@ -587,7 +691,7 @@ a {
 }
 
 
-/*Вторая страниа*/
+/*Вторая страница, все нормально, кроме верхнего отступоп у hotel-name*/
 
 .inner-page .main-navigation {
   margin-bottom: 303px;
@@ -607,11 +711,11 @@ a {
   outline: 1px solid red;
 }
 */
-
+/*
 .hotels-list * {
   outline: 1px solid red;
 }
-
+*/
 .hotels-list /*весь список*/{
   display: flex;
   flex-direction: column;
@@ -629,14 +733,23 @@ a {
   margin-right: 30px;
 }
 
-.hotel-name a {
-  margin: 0;
+.hotel-name {
   padding: 0;
+  margin-top: -5px;
+  margin-bottom: 6px;
+  background-color: yellow;
 }
 
-.hotel-name {
-  margin: 0;
-  padding: 0;
+.hotel-name  a{
+  display: block;
+}
+
+.about-hotel {
+  display: block;
+}
+
+.booking-button{
+  display: block;
 }
 
 .hotel-item-container {
@@ -652,7 +765,7 @@ a {
 }
 
 .hotel-type p {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .hotel-accepting {
@@ -660,7 +773,7 @@ a {
 }
 
 .hotel-accepting p {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .about-hotel {
@@ -675,7 +788,7 @@ a {
   position: relative;
   width: 110px;
   text-align: center;
-  padding-top: 64px;
+  padding-top: 63px;
 }
 
 .hotel-rating p {
@@ -722,6 +835,8 @@ a {
 .hotels-list-item:first-child {
   border-top: 1px solid rgba(0, 1, 1, 0.2);
 }
+
+
 /*
 .hotel-item-container {
   display: flex;
