@@ -574,6 +574,10 @@ a {
     background-image: url("../img/sedona-map.jpg");
 }
 
+.iframe-map {
+  border: 0;
+}
+
 /*Футер*/
 
 .main-footer {
