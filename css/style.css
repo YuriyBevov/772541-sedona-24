@@ -161,9 +161,11 @@ a {
 }
 
 .reasons-and-recomendations {
+    position: relative;
     font-size: 14px;
     line-height: 21px;
     text-align: center;
+    z-index: 1;
     color: #333333;
     background-color: #ffffff;
 }
@@ -322,7 +324,6 @@ a {
 .booking {
     font-size: 14px;
     line-height: 24px;
-    padding-top: 57px;
     text-align: center;
     color: #333333;
     background-color: #ffffff;
@@ -397,7 +398,13 @@ a {
     background-color: #5496bd;
 }
 
+.form-place-container {
+  position:relative;
+  outline: 1px solid red;
+}
+
 .hotel-searching {
+    display: none;
     position: absolute;
     top: 0;
     left: 316px;
@@ -409,6 +416,7 @@ a {
     padding: 55px;
     color: #000000;
     background-color: #ffffff;
+    z-index: 0;
 }
 
 .hotel-searching p {
@@ -427,6 +435,7 @@ a {
     -ms-flex-align: baseline;
     align-items: baseline;
     margin-top: 0;
+    z-index: 1;
 }
 
 .hotel-searching-item ::-webkit-input-placeholder {
@@ -473,10 +482,9 @@ a {
     background-color: #F2F3F3;
 }
 
-/*Форма поиска*/
-
 .form-place-container {
     position: relative;
+    outline: 1px solid red;
 }
 
 .form-container {
@@ -564,6 +572,26 @@ a {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+
+.close-form-container {
+  position: relative;
+  padding-top: 57px;
+  background-color: white;
+  z-index: 1;
+}
+
+@keyframes form{
+  0% {
+    top: -395px;
+    left: 316px;
+  }
+}
+
+.form-show {
+    display: block;
+    animation-name: form;
+    animation-duration: 1.5s;
 }
 
 /*Карта*/
