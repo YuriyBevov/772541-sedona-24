@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <!--<link href="css/style.min.css" rel="stylesheet">-->
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="inner-page">
@@ -16,7 +17,6 @@
       <nav class="main-navigation">
 
         <a href="index.html"  class="main-header-logo"><img src="img/header-logo.svg" width="140" height="71" alt="City of Sedona"></a>
-        <!-- требование 3.10 (на hotels.html - логотип это ссылка на главную страницу) -->
   	    <ul class="site-navigation">
           <li><a class="site-navigation-item" href="#">Информация</a></li>
           <li><a class="site-navigation-item" href="gallery.html">Фото и видео</a></li>
@@ -29,6 +29,77 @@
     </header>
 
     <main>
+
+      <section class="hotel-conditions">
+
+        <form action="https://echo.htmlacademy.ru" method="post" class="hotel-conditions-form">
+
+        <div class="conditions-form">
+          <b>Инфраструктура:</b>
+
+          <p>
+            <label for="swimming-pool">Бассейн</label>
+            <input id="swimming-pool" type="checkbox" name="swimming-pool">
+          </p>
+          <p>
+            <label for="parking">Парковка</label>
+            <input id="parking" type="checkbox" name="parking">
+          </p>
+          <p>
+          <label for="wi-fi">Wi-Fi</label>
+          <input id="wi-fi" type="checkbox" name="wi-fi">
+        </p>
+        </div>
+
+        <div class="conditions-form">
+          <b>Тип жилья:</b>
+
+          <p>
+            <label for="hotel">Гостиница</label>
+            <input id="hotel" type="checkbox" name="hotel">
+          </p>
+
+          <p>
+            <label for="motel">Мотель</label>
+            <input id="motel" type="checkbox" name="motel">
+          </p>
+
+          <p>
+            <label for="apartments">Апартаменты</label>
+            <input id="apartments" type="checkbox" name="apartments">
+          </p>
+
+        </div>
+
+        <div class="price-range">  <!--??-->
+          <b class="">Стоимость в сутки (Р):</b>
+          <input id="" type="range" min="0" max="3000" value="100"></input>
+          <button class="filter-show-button" type="submit">Показать</button>
+        </div>
+
+        </form>
+      </section>
+
+      <section class="hotel-searching-results">
+
+        <div class="search-results">
+          <b>Найдено: <span class="found-count">3</span></b>
+          <p>Сортировка:</p>
+          <ul class="sorting-list">
+            <li class="current-choise sorting-item"><a href="">По цене</a></li>
+            <li class="sorting-item"><a href="">По типу</a></li>
+            <li class="sorting-item"><a href="">По рейтингу</a></li>
+          </ul>
+          <div class="cursors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="cursor">
+              <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="current-cursor cursor">
+              <path fill="#231F20" d="M5.5 10L0 0h11"/>
+            </svg>
+          </div>
+        </div>
 
       <ul class="hotels-list">
 
@@ -112,7 +183,7 @@
        </li>
 
       </ul>
-
+    </section>
     </main>
 
     <footer class="main-footer">
