@@ -35,49 +35,58 @@
         <form action="https://echo.htmlacademy.ru" method="post" class="hotel-conditions-form">
 
         <div class="conditions-form">
+
           <b>Инфраструктура:</b>
 
-          <p>
-            <label for="swimming-pool">Бассейн</label>
-            <input id="swimming-pool" type="checkbox" name="swimming-pool">
-          </p>
-          <p>
-            <label for="parking">Парковка</label>
-            <input id="parking" type="checkbox" name="parking">
-          </p>
-          <p>
-          <label for="wi-fi">Wi-Fi</label>
-          <input id="wi-fi" type="checkbox" name="wi-fi">
-        </p>
+            <label class="checkbox-item"><input class="checkbox-input" type="checkbox" name="swimming-pool" checked>
+              <span class="checkbox"></span>
+                <p>Бассейн</p>
+            </label>
+
+            <label class="checkbox-item"><input class="checkbox-input" type="checkbox" name="parking">
+              <span class="checkbox"></span>
+                <p>Парковка</p>
+            </label>
+
+            <label class="checkbox-item"><input class="checkbox-input" id="wi-fi" type="checkbox" name="wi-fi">
+              <span class="checkbox"></span>
+                <p>Wi-Fi</p>
+            </label>
+
         </div>
 
         <div class="conditions-form">
+
           <b>Тип жилья:</b>
 
-          <p>
-            <label for="hotel">Гостиница</label>
-            <input id="hotel" type="checkbox" name="hotel">
-          </p>
+            <label class="checkbox-item"><input class="checkbox-input" type="checkbox" name="hotel" checked>
+              <span class="checkbox"></span>
+                <p>Гостиница</p>
+            </label>
 
-          <p>
-            <label for="motel">Мотель</label>
-            <input id="motel" type="checkbox" name="motel">
-          </p>
+            <label class="checkbox-item"><input class="checkbox-input" type="checkbox" name="motel" checked>
+              <span class="checkbox"></span>
+                <p>Мотель</p>
+            </label>
 
-          <p>
-            <label for="apartments">Апартаменты</label>
-            <input id="apartments" type="checkbox" name="apartments">
-          </p>
+            <label class="checkbox-item"><input class="checkbox-input" type="checkbox" name="apartments" checked>
+              <span class="checkbox"></span>
+                <p>Апартаменты</p>
+            </label>
+
 
         </div>
 
-        <div class="price-range">  <!--??-->
+        <div class="price-range">
+
           <b class="">Стоимость в сутки (Р):</b>
-          <input id="" type="range" min="0" max="3000" value="100"></input>
+          <input id="" type="range" min="0" max="4000" value="3000"></input>
           <button class="filter-show-button" type="submit">Показать</button>
+
         </div>
 
         </form>
+
       </section>
 
       <section class="hotel-searching-results">
@@ -254,7 +263,7 @@
      </footer>
 
     </div>
-
+    <script src="js/script.min.js"></script>
     </body>
 
     </html>
