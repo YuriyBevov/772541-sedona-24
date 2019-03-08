@@ -548,8 +548,6 @@ a {
     outline: none;
 }
 
-/**/
-
 .hotel-special-item input[type="text"]:hover {
   background-color: #ebebeb;
 }
@@ -1036,40 +1034,48 @@ a {
     border-top: 1px solid #eae8ea;
 }
 
-
 /*форма с чекбоксом*/
 
-.hotel-conditions-form {
-  display: flex;
+.checkbox-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .hotel-conditions {
   background-color: #7799BD;
   background-image: url("../img/filter-background.jpg");
-  background-size: 100%;
   background-position: 0 -293px;
   background-repeat: no-repeat;
 }
 
-
 .hotel-conditions-form {
-    padding: 28px 72px;
-    padding-bottom: 0;
+    display: flex;
+      justify-content: space-between;
+    padding: 28px 70px 0 73px;
 }
 
 .conditions-form {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  margin-right: 5px;
+  width: 245px;
+  margin-right: 10px;
+}
+
+.conditions-form:nth-child(2) {
+  flex-grow: 2;
 }
 
 .conditions-form b {
+  display: block;
   font-size: 16px;
   line-height: 21px;
-  font-weight: bold;
-  margin-bottom: 25px;
+  font-weight: 600;
+  word-wrap: break-word;
   color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.checkbox {
+  padding-left: 40px;
 }
 
 .checkbox-item {
@@ -1077,6 +1083,7 @@ a {
   position: relative;
   font-size: 14px;
   line-height: 21px;
+  word-wrap: break-word;
   margin-bottom: 25px;
   align-items: center;
   color: #ffffff;
@@ -1086,44 +1093,165 @@ a {
   margin-bottom: 31px;
 }
 
-.checkbox-item p {
-  padding-left: 40px;
-  margin: 0;
-}
-
-.checkbox {
+.checkbox::before {
+  content:"";
   position: absolute;
+  top: 0;
+  left: 0;
   width: 27px;
   height: 23px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='%23ffffff' viewBox='0 0 23 23'%3E%3Cpath d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  }
-
-
-.checkbox-input {
-   position: absolute;
-   width: 23px;
-   height: 23px;
-   outline: none;
-   -webkit-appearance: none;
-      -moz-appearance: none;
-        appearance: none;
 }
 
-.checkbox-input:checked + .checkbox {
+.checkbox-input:checked + .checkbox::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' fill='%23ffffff' viewBox='0 0 27 23'%3E%3Cpath d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
 }
 
-.checkbox-input:checked:focus + .checkbox {
+.checkbox-input:checked:focus + .checkbox::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' fill='%23ffffff' viewBox='0 0 27 23'%3E%3Cpath d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
 }
 
-.checkbox-input:checked:disabled + .checkbox {
+
+.checkbox-input:checked:disabled + .checkbox::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' fill='%236a6a6a' viewBox='0 0 27 23'%3E%3Cpath d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
 }
 
-.checkbox-input:disabled + .checkbox {
+.checkbox-input:disabled + .checkbox::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='%236a6a6a' viewBox='0 0 23 23'%3E%3Cpath d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+
+.hotel-conditions-form div {
+  outline: 1px solid red;
+}
+/* Блок с ползунком*/
+
+.filter-range {
+  display: flex;
+  flex-direction: column;
+  width: 318px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range b {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.price-controls {
+  display: flex;
+  position: relative;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.price-controls::after {
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-range {
+  font-size: 14px;
+  line-height: 32px;
+  width: 157px;
+}
+
+.min-price {
+  padding-left: 65px;
+}
+
+.max-price {
+   padding-left: 55px;
+}
+
+.price-controls input[type="text"] {
+  font-size: inherit;
+  line-height: 21px;
+  width: 50px;
+  margin: 0;
+  background: none;
+  border: none;
+  color: #ffffff;
+}
+
+.min-price,
+.max-price {
+  cursor: pointer;
+}
+
+.range-controls {
+  position: relative;
+    margin-bottom: 32px;
+}
+
+.scale {
+  width: 318px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bar {
+  width: 80%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-image: url("../img/filter-button.svg");
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px rgba(0, 1, 1, 0.2);
+}
+
+.toggle-min {
+  position: absolute;
+  top: -8px;
+  left: 0%;
+}
+
+.toggle-max {
+  position: absolute;
+  top: -8px;
+  left: 79%;
+}
+
+.filter-show-button {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  width: 137px;
+  height: 36px;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  margin-left: 85px;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.filter-show-button:hover,
+.filter-show-button:focus {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /**/
@@ -1192,7 +1320,7 @@ background-color: #ffffff;
   background-color: #ffffff;
 }
 
-.cursors {
+.arrows {
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -1200,16 +1328,16 @@ background-color: #ffffff;
   margin-left: auto;
 }
 
-.cursor path {
+.arrow path {
   fill: #cacaca;
 }
 
-.cursor path:hover,
-.cursor path:focus {
+.arrow path:hover,
+.arrow path:focus {
   fill: #000000;
 }
 
-.cursor path:active {
+.arrow path:active {
   fill: #81b3d2;
 }
 
@@ -1218,6 +1346,6 @@ background-color: #ffffff;
   color: #81b3d2;
 }
 
-.current-cursor path{
+.current-arrow path{
   fill: #81b3d2;
 }
