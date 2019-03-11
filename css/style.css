@@ -358,7 +358,7 @@ a {
     line-height: 26px;
     font-weight: bold;
     border: none;
-    vertical-align: center;
+    vertical-align: middle;
     text-align: center;
     text-transform: uppercase;
     width: 568px;
@@ -535,7 +535,6 @@ a {
     width: 21px;
     height: 22px;
     border: none;
-    outline: none;
     cursor: pointer;
     color: #a9a9a9;
     background-color: transparent;
@@ -1316,7 +1315,12 @@ a {
 }
 
 .sorting-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     list-style: none;
+    width: 650px;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     padding-top: 2px;
@@ -1349,12 +1353,6 @@ a {
     margin: 0;
     color: #000000;
     background-color: #ffffff;
-}
-
-.sorting-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
 }
 
 .sorting-item {
@@ -1426,4 +1424,15 @@ a {
 .current-arrow path:focus,
 .current-arrow path:active {
     fill: #81b3d2;
+}
+
+@keyframes form-error {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}
+  20%, 40%, 60%, 80% {transform: translateX(5px);}
+}
+
+.form-error {
+  animation-name: form-error;
+  animation-duration: 0.5s;
 }
